@@ -4,11 +4,12 @@
         br = branch
         co = checkout
         df = diff
-        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
         g = "!f() { gitg . $1; }; f"
 	d = difftool
 [core]
 	editor = vim
+	pager =
 [diff]
 	tool = vimdiff
 [difftool]
