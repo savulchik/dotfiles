@@ -19,3 +19,5 @@
 [user]
 	name = Stanislav Savulchik
 	email = s.savulchik@gmail.com
+[push]
+	default = simple
