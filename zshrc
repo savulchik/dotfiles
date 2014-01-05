@@ -43,3 +43,7 @@ DISABLE_CORRECTION="true"
 plugins=(git vagrant)
 
 source $ZSH/oh-my-zsh.sh
+
+export DEBFULLNAME="Stanislav Savulchik"
+export DEBEMAIL="s.savulchik@gmail.com"
+
