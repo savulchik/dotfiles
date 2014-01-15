@@ -48,3 +48,5 @@ export DEBFULLNAME="Stanislav Savulchik"
 export DEBEMAIL="s.savulchik@gmail.com"
 export EDITOR="vim"
 
+export EDITOR="vim"
+
