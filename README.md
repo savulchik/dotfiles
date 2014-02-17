@@ -1,2 +1,2 @@
-dotify
-======
+My dotfiles
+===========
