@@ -13,3 +13,7 @@ SBT_HOME=$HOME/.sbt/0.13
 mkdir -pv $SBT_HOME
 ln -sfv $DOTFILES_DIR/sbt/0.13/prompt.sbt $SBT_HOME/prompt.sbt
 
+HTTPIE_HOME=$HOME/.httpie
+mkdir -pv $HTTPIE_HOME
+ln -sfv $DOTFILES_DIR/httpie/config.json $HTTPIE_HOME/config.json
+
