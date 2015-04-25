@@ -45,6 +45,8 @@ plugins=(git osx terminalapp)
 source $ZSH/oh-my-zsh.sh
 
 unsetopt cdablevars
+setopt interactivecomments
+bindkey "^Q" push-input
 
 export DEBFULLNAME="Stanislav Savulchik"
 export DEBEMAIL="s.savulchik@gmail.com"
