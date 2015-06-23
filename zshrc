@@ -51,4 +51,5 @@ bindkey "^Q" push-input
 export DEBFULLNAME="Stanislav Savulchik"
 export DEBEMAIL="s.savulchik@gmail.com"
 export EDITOR="vim"
+export LESS="-iMSF -j.5"
 
