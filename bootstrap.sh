@@ -8,6 +8,7 @@ ln -sfv $DOTFILES_DIR/vimrc $HOME/.vimrc
 ln -sfvn $DOTFILES_DIR/zsh $HOME/.zsh
 ln -sfv $DOTFILES_DIR/zshrc $HOME/.zshrc
 ln -sfv $DOTFILES_DIR/gemrc $HOME/.gemrc
+ln -sfv $DOTFILES_DIR/psqlrc $HOME/.psqlrc
 
 SBT_HOME=$HOME/.sbt/0.13
 mkdir -pv $SBT_HOME
