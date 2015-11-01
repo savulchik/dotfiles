@@ -53,8 +53,8 @@ plugins=(git osx)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,8 +62,6 @@ unsetopt cdablevars
 setopt interactivecomments
 bindkey "^Q" push-input
 
-export DEBFULLNAME="Stanislav Savulchik"
-export DEBEMAIL="s.savulchik@gmail.com"
 export EDITOR="vim"
 export LESS="-iMSF -j.5"
 
