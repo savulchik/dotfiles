@@ -52,10 +52,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git osx)
 
 # User configuration
-
-export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
 unsetopt cdablevars
