@@ -11,5 +11,5 @@ ln -sfv $DOTFILES_DIR/psqlrc $HOME/.psqlrc
 
 SBT_HOME=$HOME/.sbt/0.13
 mkdir -pv $SBT_HOME
-ln -sfv $DOTFILES_DIR/sbt/0.13/prompt.sbt $SBT_HOME/prompt.sbt
+ln -sfv $DOTFILES_DIR/sbt/0.13/{prompt.sbt,ammonite.sbt} $SBT_HOME
 
