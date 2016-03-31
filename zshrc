@@ -59,5 +59,5 @@ setopt interactivecomments
 bindkey "^Q" push-input
 
 export EDITOR="vim"
-export LESS="-iMSF -j.5"
+export LESS="-iMS -j.5"
 
