@@ -60,5 +60,5 @@ bindkey "^Q" push-input
 
 export EDITOR="vim"
 export LESS="-iMS -j.5"
-export BC_ENV_ARGS="~/.bcrc"
+export BC_ENV_ARGS="$HOME/.bcrc"
 
