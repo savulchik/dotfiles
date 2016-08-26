@@ -27,3 +27,5 @@
 	rebase = true
 [fetch]
 	prune = true
+[branch "master"]
+	mergeoptions = --no-ff
