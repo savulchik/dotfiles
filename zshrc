@@ -62,3 +62,5 @@ export EDITOR="vim"
 export LESS="-iMS -j.5"
 export BC_ENV_ARGS="$HOME/.bcrc"
 
+alias dog="pygmentize -g"
+
