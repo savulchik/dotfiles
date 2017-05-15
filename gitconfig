@@ -31,3 +31,4 @@
 	mergeoptions = --no-ff
 [rerere]
 	enabled = true
+	autoupdate = true
