@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx docker docker-compose kubectl)
+plugins=(git osx docker docker-compose kubectl chef)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
@@ -65,6 +65,13 @@ export BC_ENV_ARGS="$HOME/.bcrc"
 alias dog="pygmentize -g"
 alias clip='xclip -sel clip'
 alias k="kubectl"
+alias kgp="kubectl get pods"
+alias kdp="kubectl describe pod"
+alias kgs="kubectl get services"
+alias kds="kubectl describe service"
+alias kgd="kubectl get deployments"
+alias kdd="kubectl describe deployments"
+alias ked="kubectl edit deployments"
 
 # Disable default CTRL-S behavior in order to make forward search work
 stty -ixon
