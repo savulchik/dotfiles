@@ -64,6 +64,8 @@ export BC_ENV_ARGS="$HOME/.bcrc"
 
 alias dog="pygmentize -g"
 alias clip='xclip -sel clip'
+alias setclip='clip'
+alias getclip='xclip -sel clip -o'
 alias k="kubectl"
 alias kgp="kubectl get pods"
 alias kdp="kubectl describe pod"
