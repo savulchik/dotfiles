@@ -1,11 +1,20 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,11 +58,17 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx docker docker-compose kubectl chef)
+plugins=(
+  git
+  osx
+  docker
+  docker-compose
+  kubectl
+)
 
-# User configuration
 source $ZSH/oh-my-zsh.sh
 
+# User configuration
 unsetopt cdablevars
 setopt interactivecomments
 bindkey "^Q" push-input
@@ -62,19 +77,31 @@ export EDITOR="vim"
 export LESS="-iMS -j.5"
 export BC_ENV_ARGS="$HOME/.bcrc"
 
+# Disable default CTRL-S behavior in order to make forward search work
+stty -ixon
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dog="pygmentize -g"
 alias clip='xclip -sel clip'
 alias setclip='clip'
 alias getclip='xclip -sel clip -o'
-alias k="kubectl"
-alias kgp="kubectl get pods"
-alias kdp="kubectl describe pod"
-alias kgs="kubectl get services"
-alias kds="kubectl describe service"
-alias kgd="kubectl get deployments"
-alias kdd="kubectl describe deployments"
-alias ked="kubectl edit deployments"
-
-# Disable default CTRL-S behavior in order to make forward search work
-stty -ixon
-
