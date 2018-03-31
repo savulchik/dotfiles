@@ -5,6 +5,7 @@
 \set PROMPT1 '%M %/%R%# '
 \set PROMPT2 '%R%# '
 \set HISTFILE ~/.psql_history- :DBNAME
+\set HISTSIZE 10000
 \set HISTCONTROL ignoredups
 \pset null [null]
 \unset QUIET
