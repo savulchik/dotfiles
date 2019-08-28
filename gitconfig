@@ -32,3 +32,5 @@
 [rerere]
 	enabled = true
 	autoupdate = true
+[status]
+	submodulesummary = 1
