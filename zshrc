@@ -61,9 +61,10 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   osx
-  docker
-  docker-compose
-  kubectl
+#  docker
+#  docker-compose
+kubectl
+ # jenv
 )
 
 source $ZSH/oh-my-zsh.sh
