@@ -1,6 +1,7 @@
 " For Mac/Linux users
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Для корректной работы клавиши Backspace
