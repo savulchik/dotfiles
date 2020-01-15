@@ -27,8 +27,6 @@
 	rebase = true
 [fetch]
 	prune = true
-[branch "master"]
-	mergeoptions = --no-ff
 [rerere]
 	enabled = true
 	autoupdate = true
