@@ -1,0 +1,34 @@
+options.disp_currency_fmt = '%.05f'
+options.disp_float_fmt = '{:.05f}'
+options.quitguard = True
+
+import time
+import datetime
+
+def type_ctime(value):
+    return str(value)
+
+def type_timedelta(value):
+    return str(value)
+
+def type_datetime(value):
+    return str(value)
+
+def format_ctime(fmtstr, value):
+    return time.ctime(int(value) / 1000)
+
+def format_timedelta(fmtstr, value):
+    return str(datetime.timedelta(milliseconds=int(value)))
+
+def format_datetime(fmtstr, value):
+    nsk_timezone = datetime.timezone(datetime.timedelta(hours=7), name='Asia/Novosibirsk')
+    dt = datetime.datetime.fromtimestamp(int(value) / 1000).astimezone(nsk_timezone)
+    return f"{dt:%Y-%m-%d %H:%M:%S}.{dt.microsecond // 1000:03d} {dt:%z}"
+
+vd.addType(type_ctime, icon='c', formatter=format_ctime)
+vd.addType(type_timedelta, icon='d', formatter=format_timedelta)
+vd.addType(type_datetime, icon='D', formatter=format_datetime)
+
+TableSheet.addCommand('1', 'type-ctime', 'cursorCol.type=type_ctime')
+TableSheet.addCommand('2', 'type-timedelta', 'cursorCol.type=type_timedelta')
+TableSheet.addCommand('3', 'type-datetime', 'cursorCol.type=type_datetime')
