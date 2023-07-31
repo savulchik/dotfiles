@@ -5,21 +5,14 @@ options.quitguard = True
 import datetime
 
 def type_timedelta(value):
-    return str(value)
+    return datetime.timedelta(milliseconds=int(value))
 
 def type_datetime(value):
-    return str(value)
-
-def format_timedelta(fmtstr, value):
-    return str(datetime.timedelta(milliseconds=int(value)))
-
-def format_datetime(fmtstr, value):
     nsk_timezone = datetime.timezone(datetime.timedelta(hours=7), name='Asia/Novosibirsk')
-    dt = datetime.datetime.fromtimestamp(int(value) / 1000).astimezone(nsk_timezone)
-    return f"{dt:%Y-%m-%d %H:%M:%S}.{dt.microsecond // 1000:03d} {dt:%z}"
+    return datetime.datetime.fromtimestamp(int(value) / 1000).astimezone(nsk_timezone)
 
-vd.addType(type_timedelta, icon='d', formatter=format_timedelta)
-vd.addType(type_datetime, icon='D', formatter=format_datetime)
+vd.addType(type_timedelta, icon='d')
+vd.addType(type_datetime, icon='D')
 
 TableSheet.addCommand('1', 'type-datetime', 'cursorCol.type=type_datetime')
 TableSheet.addCommand('2', 'type-timedelta', 'cursorCol.type=type_timedelta')
