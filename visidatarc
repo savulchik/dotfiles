@@ -2,17 +2,29 @@ options.disp_currency_fmt = '%.05f'
 options.disp_float_fmt = '{:.05f}'
 options.quitguard = True
 
-import datetime
+import datetime as dt
 
-def type_timedelta(value):
-    return datetime.timedelta(milliseconds=int(value))
+def timedelta(value):
+    if value is None:
+        return None
+    elif type(value) is dt.timedelta:
+        return value
+    else:
+        return dt.timedelta(milliseconds=int(value))
 
-def type_datetime(value):
-    nsk_timezone = datetime.timezone(datetime.timedelta(hours=7), name='Asia/Novosibirsk')
-    return datetime.datetime.fromtimestamp(int(value) / 1000).astimezone(nsk_timezone)
+def datetime(value):
+    if value is None:
+        return None
+    elif type(value) is dt.datetime:
+        return value
+    else:
+        return dt.datetime.fromtimestamp(int(value) / 1000)
 
-vd.addType(type_timedelta, icon='d')
-vd.addType(type_datetime, icon='D')
+def format_timedelta(fmt, delta):
+    return str(delta) if delta >= dt.timedelta() else f'-{abs(delta)}'
 
-TableSheet.addCommand('1', 'type-datetime', 'cursorCol.type=type_datetime')
-TableSheet.addCommand('2', 'type-timedelta', 'cursorCol.type=type_timedelta')
+vd.addType(timedelta, icon='d')
+vd.addType(datetime, icon='D')
+
+TableSheet.addCommand('1', 'type-datetime', 'cursorCol.type=datetime')
+TableSheet.addCommand('2', 'type-timedelta', 'cursorCol.type=timedelta')

@@ -9,4 +9,5 @@ ln -sfv $DOTFILES_DIR/zshrc $HOME/.zshrc
 ln -sfv $DOTFILES_DIR/gemrc $HOME/.gemrc
 ln -sfv $DOTFILES_DIR/psqlrc $HOME/.psqlrc
 ln -sfv $DOTFILES_DIR/bcrc $HOME/.bcrc
+ln -sfv $DOTFILES_DIR/visidatarc $HOME/.visidatarc
 
