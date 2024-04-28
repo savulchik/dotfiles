@@ -60,11 +60,8 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  osx
-#  docker
-#  docker-compose
-kubectl
- # jenv
+  macos
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -74,7 +71,7 @@ unsetopt cdablevars
 setopt interactivecomments
 bindkey "^Q" push-input
 
-export EDITOR="vim"
+export EDITOR="nvim"
 export LESS="-iMS -j.5"
 export BC_ENV_ARGS="$HOME/.bcrc"
 
@@ -102,8 +99,7 @@ stty -ixon
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dog="pygmentize -g"
-alias clip='xclip -sel clip'
-alias setclip='clip'
-alias getclip='xclip -sel clip -o'
-alias cols='cut -c1-$COLUMNS'
+alias vim='nvim'
+
+setopt INC_APPEND_HISTORY
+
